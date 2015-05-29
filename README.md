@@ -1,2 +1,2 @@
 # unbios.github.io
-makers of most excellent software
+Unbios, Ltd. is a technology company with a mission to make excellent software, which is simple and enjoyable to use
