@@ -1,2 +1,2 @@
 # unbios.github.io
-Unbios, Ltd. is a technology company with a mission to make excellent software, which is simple and enjoyable to use.
+Static website page for Unbios a technology company with a mission to make excellent software, which is simple and enjoyable to use.
