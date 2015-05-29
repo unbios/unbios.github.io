@@ -543,6 +543,208 @@ ul#twitter_update_list li {
   text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
 
+
+.tooltip {
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.15s ease-in-out 0s;
+    visibility: visible;
+    z-index: 500;
+}
+.tooltip.in {
+    opacity: 0.9;
+}
+.tooltip.top {
+    margin-top: -3px;
+    padding: 5px 0;
+}
+.tooltip.right {
+    margin-left: 3px;
+    padding: 0 5px;
+}
+.tooltip.bottom {
+    margin-top: 3px;
+    padding: 5px 0;
+}
+.tooltip.left {
+    margin-left: -3px;
+    padding: 0 5px;
+}
+.tooltip-inner {
+    background-color: #3a4141;
+    border-radius: 4px;
+    color: white;
+    max-width: 200px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+.tooltip-arrow {
+    border-color: transparent;
+    border-style: solid;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: #3a4141;
+    border-width: 5px 5px 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #3a4141;
+    border-width: 5px 5px 5px 0;
+    left: 0;
+    margin-top: -5px;
+    top: 50%;
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #3a4141;
+    border-width: 5px 0 5px 5px;
+    margin-top: -5px;
+    right: 0;
+    top: 50%;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #3a4141;
+    border-width: 0 5px 5px;
+    left: 50%;
+    margin-left: -5px;
+    top: 0;
+}
+.popover {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    max-width: 10em;
+    padding: 1px;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    white-space: normal;
+    width: 100%;
+    z-index: 2000;
+}
+.popover.top {
+    margin-top: -10px;
+}
+.popover.right {
+    margin-left: 10px;
+}
+.popover.bottom {
+    margin-top: 10px;
+}
+.popover.left {
+    margin-left: -10px;
+}
+
+@media (min-width: 40em) {
+
+.popover {
+    max-width: 28em;
+}
+
+}
+
+.popover-title {
+    background-color: #3a4141;
+    border-bottom: 1px solid #3a4141;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-size: 17px;
+    line-height: 18px;
+    margin: 0;
+    padding: 8px 14px;
+}
+.popover-title:empty {
+    display: none;
+}
+.popover-content {
+    padding: 8px 14px;
+}
+.popover .arrow, .popover .arrow::after {
+    border-color: transparent;
+    border-style: solid;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+.popover .arrow {
+    border-width: 11px;
+}
+.popover .arrow::after {
+    border-width: 10px;
+    content: "";
+}
+.popover.top .arrow {
+    border-bottom-width: 0;
+    border-top-color: #3a4141;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+}
+.popover.top .arrow::after {
+    border-bottom-width: 0;
+    border-top-color: white;
+    bottom: 1px;
+    margin-left: -10px;
+}
+.popover.right .arrow {
+    border-left-width: 0;
+    border-right-color: #3a4141;
+    left: -11px;
+    margin-top: -11px;
+    top: 50%;
+}
+.popover.right .arrow::after {
+    border-left-width: 0;
+    border-right-color: white;
+    bottom: -10px;
+    left: 1px;
+}
+.popover.bottom .arrow {
+    border-bottom-color: #3a4141;
+    border-top-width: 0;
+    left: 50%;
+    margin-left: -11px;
+    top: -11px;
+}
+.popover.bottom .arrow::after {
+    border-bottom-color: white;
+    border-top-width: 0;
+    margin-left: -10px;
+    top: 1px;
+}
+.popover.left .arrow {
+    border-left-color: #3a4141;
+    border-right-width: 0;
+    margin-top: -11px;
+    right: -11px;
+    top: 50%;
+}
+.popover.left .arrow::after {
+    border-left-color: white;
+    border-right-width: 0;
+    bottom: -10px;
+    right: 1px;
+}
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out 0s;
+}
+.fade.in {
+    opacity: 1;
+}
+
       
 /* animate start
       
