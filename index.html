@@ -825,7 +825,13 @@ ul#twitter_update_list li {
 <script type="text/javascript">
 
     $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
-    $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {e.preventDefault()})
+    /* $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {e.preventDefault()}) */
+    
+    $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {
+     setTimeout(function() {
+        $('#logotag').popover('hide');
+    }, 1000);
+});
     $('a[data-toggle=popover]').on('shown.bs.popover', function() {
     setTimeout(function() {
         $('#logotag').popover('hide');
