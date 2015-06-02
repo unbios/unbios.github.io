@@ -826,23 +826,9 @@ ul#twitter_update_list li {
 
     $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
     /* $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {e.preventDefault()}) */
-    
-    $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
+    $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },4000);});
     $('#logotag').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
-/*
-    $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {
-     setTimeout(function() {
-        $('#logotag').popover('hide');
-    }, 1000);
-});
 
-*/
-    $('a[data-toggle=popover]').on('shown.bs.popover', function() {
-    setTimeout(function() {
-        $('#logotag').popover('hide');
-    }, 1000);
-});
-      
 </script>
       
 <!-- animate script end -->
