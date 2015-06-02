@@ -826,6 +826,11 @@ ul#twitter_update_list li {
 
     $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
     $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {e.preventDefault()})
+    $('a[data-toggle=popover]').on('shown.bs.popover', function() {
+    setTimeout(function() {
+        $('#logotag').popover('hide');
+    }, 1000);
+});
       
 </script>
       
