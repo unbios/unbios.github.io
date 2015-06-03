@@ -858,11 +858,11 @@ ul#twitter_update_list li {
 <script type="text/javascript">
  /* woaw ... that's a bit clunky! */
  $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
- $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() { $('#avatarhover').show(); }); },2000);});
+ $('#logotag').hover(function(event) { $('#avatar').hide(); $('#avatarhover').show(); setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
  $('#logotag').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
  
  $('#logotagalt').tooltip({ selector: "a[data-toggle=tooltip]" })
- $('#logotagalt').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
+ $('#logotagalt').hover(function(event) { $('#avatarhover').hide(); $('#avatar').show(); setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
  $('#logotagalt').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
 /*
  $(document).ready(function() {
