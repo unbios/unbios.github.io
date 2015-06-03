@@ -823,12 +823,10 @@ ul#twitter_update_list li {
 <script src="js/tooltip.js"></script>
       
 <script type="text/javascript">
-
-    $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
-    /* $("a[data-toggle=popover]").popover({ html : true }).click(function(e) {e.preventDefault()}) */
-    $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
-    $('#logotag').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
-
+ /* woaw ... that's a bit clunky! */
+ $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
+ $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
+ $('#logotag').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
 </script>
       
 <!-- animate script end -->
