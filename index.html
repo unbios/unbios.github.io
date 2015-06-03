@@ -869,12 +869,14 @@ ul#twitter_update_list li {
    var timer;
    $("#avatar").hover(
         function () { $('#avatar').hide();$('#avatarhover').show(); },
-        function() { timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 5000);}
+        function() { timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 5000); clearTimeout(timer);}
     );
+   /* 
    $("#avatarhover").hover(
         function () { clearTimeout(timer); },
         function() { $('#avatar').show();}
    );
+   */
 })
 </script>
       
