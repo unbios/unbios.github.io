@@ -858,15 +858,15 @@ ul#twitter_update_list li {
 <script type="text/javascript">
  /* woaw ... that's a bit clunky! */
  $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
- $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); $('#avatarhover').hide(); $('#avatar').show(); },2000);});
+ $('#logotag').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() { $('#avatarhover').hide(); $('#avatar').show(); }); },2000);});
  $('#logotag').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
  
  $('#logotagalt').tooltip({ selector: "a[data-toggle=tooltip]" })
  $('#logotagalt').hover(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
  $('#logotagalt').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
-
+/*
  $(document).ready(function() {
- /* mobile hover */  
+ // mobile hover  
    var timer;
    $("#avatar").hover(
         function () { $('#avatar').hide();$('#avatarhover').show(); },
@@ -877,6 +877,7 @@ ul#twitter_update_list li {
         function() { $('#avatarhover').hide();$('#avatar').show(); }
    );
 })
+*/
 </script>
       
 <!-- animate script end -->
