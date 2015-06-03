@@ -858,41 +858,13 @@ ul#twitter_update_list li {
 <script type="text/javascript">
  /* woaw ... that's a bit clunky! */
  $('#logotag').tooltip({ selector: "a[data-toggle=tooltip]" })
- 
- /* $('#logotag').hover(function(event) { $('#avatar').hide(); $('#avatarhover').show(); setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); $('#avatarhover').hide(); $('#avatar').show(); },2000);}); */
- 
- $('#logotag').on({
-    mouseenter: function() {
-       console.log('enter');
-       $('#avatar').hide();
-       $('#avatarhover').show();
-       setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); $('#avatarhover').hide(); $('#avatar').show(); },2000);
-    },
-    mouseleave: function() {
-        console.log('bye!');
-        $('#avatarhover').hide(); $('#avatar').show();
-    }
- });
- 
+ $('#logotag').on({ 
+    mouseenter: function() { $('#avatar').hide(); $('#avatarhover').show(); setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); $('#avatarhover').hide(); $('#avatar').show(); },2000);},
+    mouseleave: function() { $('#avatarhover').hide(); $('#avatar').show(); console.log('hello developer, hope you have a great day');}});
  $('#logotag').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
- 
  $('#logotagalt').tooltip({ selector: "a[data-toggle=tooltip]" })
  $('#logotagalt').hover(function(event) { $('#avatarhover').hide(); $('#avatar').show(); setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
  $('#logotagalt').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
-/*
- $(document).ready(function() {
- // mobile hover  
-   var timer;
-   $("#avatar").hover(
-        function () { $('#avatar').hide();$('#avatarhover').show(); },
-        function() { timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 2000);}
-   );
-   $("#avatarhover").hover(
-        function () { clearTimeout(timer); },
-        function() { $('#avatarhover').hide();$('#avatar').show(); }
-   );
-})
-*/
 </script>
       
 <!-- animate script end -->
