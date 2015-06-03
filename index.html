@@ -881,12 +881,12 @@ ul#twitter_update_list li {
    
    $("#avatar").on({
     mouseenter: function () {
-        function () { $('#avatar').hide();$('#avatarhover').show(); },
-        function() { timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 5000);}
+        $('#avatar').hide();$('#avatarhover').show();
+        timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 5000);
     },
     mouseleave: function () {
-        function () { clearTimeout(timer); },
-        function() { $('#avatarhover').hide();$('#avatar').show(); }
+        clearTimeout(timer);
+        $('#avatarhover').hide();$('#avatar').show();
     }
 });
   
