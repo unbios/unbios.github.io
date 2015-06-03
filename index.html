@@ -866,14 +866,15 @@ ul#twitter_update_list li {
  $('#logotagalt').click(function(event) { setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); },2000);});
 
  $(document).ready(function() {
+ /* mobile hover */  
    var timer;
    $("#avatar").hover(
         function () { $('#avatar').hide();$('#avatarhover').show(); },
         function() { timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 2000);}
-    );
+   );
    $("#avatarhover").hover(
-        function() { $('#avatarhover').hide();$('#avatar').show(); },
-        function () { clearTimeout(timer); }
+        function () { clearTimeout(timer); },
+        function() { $('#avatarhover').hide();$('#avatar').show(); }
    );
 })
 </script>
