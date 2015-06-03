@@ -863,9 +863,8 @@ ul#twitter_update_list li {
  
  $('#logotag').on({
     mouseenter: function() {
-        console.log('enter');
-        $('#avatar').hide(); $('#avatarhover').show();
-        setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); $('#avatarhover').hide(); $('#avatar').show(); },2000);});
+       console.log('enter');
+       $('#avatar').hide(); $('#avatarhover').show(); setTimeout(function() { $('.tooltip').fadeOut('slow',function() {}); $('#avatarhover').hide(); $('#avatar').show(); },2000);}
     },
     mouseleave: function() {
         console.log('bye!');
