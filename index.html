@@ -868,8 +868,8 @@ ul#twitter_update_list li {
  $(document).ready(function() {
    var timer;
    $("#avatar").hover(
-        function () { $('#avatarhover').show();},
-        function() { timer = setTimeout(function(){$('#avatarhover').hide();}, 5000);}
+        function () { $('#avatar').hide();$('#avatarhover').show(); },
+        function() { timer = setTimeout(function(){$('#avatarhover').hide();$('#avatar').show();}, 5000);}
     );
    $("#avatarhover").hover(
         function () { clearTimeout(timer); },
