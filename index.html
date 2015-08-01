@@ -194,6 +194,23 @@ strong, .strong {
       
 p, ul, ol { margin-top: 1em; }
 
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) { 
+
+      header { padding-top: 3.2rem; margin: 0 auto; overflow: hidden; }
+      header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }    
+
+      #logotag {width: 50%; margin-left: auto; margin-right: auto;}
+      #logotagalt {width: 50%; margin-left: auto; margin-right: auto;}
+      h1, .h1 { font-size: 40px; }
+      h1, .h1 { font-size: 40px; }
+      h2, .h2 { font-size: 32px; }
+      h3, .h3 { font-size: 24px; }
+      p, .p, ul, ol { font-size: 20px;}
+      small, .small { font-size: 15px;}
+      #logotag {display:block;}
+      #logotagalt {display:none;}
+}
+
 @media screen and (max-width: 479px) {
       header { padding-top: 3.2rem; margin: 0 auto; overflow: hidden; }
       header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }    
