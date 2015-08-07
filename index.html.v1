@@ -64,13 +64,14 @@
 * { margin: 0; padding: 0;}
 
 html {background: #ededed url("/img/unbios-background.png") no-repeat scroll center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
-header {background-image: url("/img/header_blu.jpg");background-repeat: repeat-x;margin-top: 0 !important;padding-top: 2.7rem;top: 0;width: 100%;}
-body {color: #111111;font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 16px;font-style: normal;font-variant: normal;font-weight: 400;line-height: 1.5;text-rendering: optimizelegibility;}
+header {background-image: url("/img/header_blu.jpg");background-repeat: repeat-x; background-size: auto 4px;margin-top: 0 !important;padding-top: 2.7rem;top: 0;width: 100%;}
+body {color: #333;font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 16px;font-style: normal;font-variant: normal;font-weight: 400;line-height: 1.5;text-rendering: optimizelegibility;}
 
 #avatar {background-image: url('/img/unbios_blue_logo_on_circle_400x400.png');background-size: 73px 73px;height: 74px;margin-left: auto;margin-right: auto;width: 73px;display:block;}
 #avatarhover {background-image: url('/img/avatar_bw_128.png');background-size: 73px 73px;height: 73px;margin-left: auto;margin-right: auto;width: 73px;display:none;}
 
-h1, h2, .h1, .h2 {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 400;line-height: 1.25;margin-top: .5em;}
+/* h1, h2, .h1, .h2 {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 400;line-height: 1.25;margin-top: .5em;} */
+h1, h2, .h1, .h2 {font-weight: 900;line-height: 1.25;margin-top: 0.5em;letter-spacing: 0.3px;word-wrap: break-word;}
 h1, .h1 {font-weight:bold;font-size: 32px;}
 h2, .h2 {font-size: 24px;}
 h3, .h3 {font-size: 20px;}
@@ -86,12 +87,35 @@ strong, .strong {font-weight: 700;}
 .center-text { text-align: center;}
 p, ul, ol { margin-top: 1em; }
 
+.unbios {color: #137CCC;}
+.isa {color: #10489D;}
+.tech {color: #1153B4;}
+.company {color: #145DCC;}
+.with {color: #10489D;}
+.a {color: #0D3D87;}
+.mission {color: #0D3D87;}
+.to {color: #10489D;}
+.make {color: #1053B4;}
+.excellent {color: #135CCC;}
+.software {color: #10489D;}
+.which {color: #0D3D87;}
+.iss {color: #10489D;}
+.simple {color: #1053B4;}
+.and {color: #125BCC;}
+.fun {color: #DF4643;}
+.tou {color: #1048AF;}
+.use {color: #2D7ACA;}
+
+.fb {color: #3A5795;}
+.ig {color: #004879;}
+
+
 @media screen and (max-width: 479px) {
       header { padding-top: 3.2rem; margin: 0 auto; overflow: hidden; }
       header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }    
 
-      #logotag {width: 50%; margin-left: auto; margin-right: auto;}
-      #logotagalt {width: 50%; margin-left: auto; margin-right: auto;}
+      #logotag {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
+      #logotagalt {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
       h1, .h1 { font-size: 40px; }
       h1, .h1 { font-size: 40px; }
       h2, .h2 { font-size: 32px; }
@@ -106,8 +130,8 @@ p, ul, ol { margin-top: 1em; }
       header { padding-top: 3.2rem; margin: 0 auto; overflow: hidden; }
       header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
 
-      #logotag {width: 50%; margin-left: auto; margin-right: auto;}
-      #logotagalt {width: 50%; margin-left: auto; margin-right: auto;}
+      #logotag {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
+      #logotagalt {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
       h1, .h1 { font-size: 40px; }
       h1, .h1 { font-size: 40px; }
       h2, .h2 { font-size: 32px; }
@@ -122,8 +146,8 @@ p, ul, ol { margin-top: 1em; }
       header { padding-top: 2.7rem; margin: 0 auto; overflow: hidden; }
       header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
 
-      #logotag {width:10%; margin-left: auto; margin-right: auto;}
-      #logotagalt {width: 10%; margin-left: auto; margin-right: auto;}
+      #logotag {width:10%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
+      #logotagalt {width: 10%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
       /* h1, .h1 { font-size: 45px; } */
       h1, .h2 { font-size: 2.75rem;font-weight: 900; }
       h2, .h2 { font-size: 40px; } 
@@ -134,7 +158,7 @@ p, ul, ol { margin-top: 1em; }
       #logotagalt {display:none;}
 }
       
-.wrap {width: 90%;padding: 0 5%;max-width: 48em;margin-left: auto;margin-right: auto;margin-top: 20px;overflow: hidden;}
+.wrap {width: 90%;padding: 0 5%;max-width: 48em;margin-left: auto;margin-right: auto;margin-top: 12px;overflow: hidden;}
       
 article {text-rendering: optimizelegibility;font-size: 1.25em;}
 a {color: #137CCC;text-decoration: none;outline: 0;}
@@ -200,17 +224,17 @@ ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear:
 .disclaim {color: #999999;text-shadow: 1px 1px rgba(255, 255, 255, 0.5);}
 
 .tooltip {display: block;font-size: 12px;line-height: 1.4;opacity: 0;position: absolute;transition: opacity 0.15s ease-in-out 0s;visibility: visible;z-index: 500;}
-.tooltip.in {opacity: 0.9;}
+.tooltip.in {opacity: 0.95;transition: opacity 0.1s ease 0s;}
 .tooltip.top {margin-top: -3px;padding: 5px 0;}
 .tooltip.right {margin-left: 3px;padding: 0 5px;}
 .tooltip.bottom {margin-top: 3px;padding: 5px 0;}
 .tooltip.left {margin-left: -3px;padding: 0 5px;}
-.tooltip-inner {background-color: #3a4141;border-radius: 4px;color: white;max-width: 200px;padding: 8px;text-align: center;text-decoration: none;}
+.tooltip-inner {background-color: #292f33;border-radius: 4px;color: white;max-width: 200px;padding: 8px;text-align: center;text-decoration: none;}
 .tooltip-arrow {border-color: transparent;border-style: solid;height: 0;position: absolute;width: 0;}
-.tooltip.top .tooltip-arrow {border-top-color: #3a4141;border-width: 5px 5px 0;bottom: 0;left: 50%;margin-left: -5px;}
-.tooltip.right .tooltip-arrow {border-right-color: #3a4141;border-width: 5px 5px 5px 0;left: 0;margin-top: -5px;top: 50%;}
-.tooltip.left .tooltip-arrow {border-left-color: #3a4141;border-width: 5px 0 5px 5px;margin-top: -5px;right: 0;top: 50%;}
-.tooltip.bottom .tooltip-arrow {border-bottom-color: #3a4141;border-width: 0 5px 5px;left: 50%;margin-left: -5px;top: 0;}
+.tooltip.top .tooltip-arrow {border-top-color: #292f33;border-width: 5px 5px 0;bottom: 0;left: 50%;margin-left: -5px;}
+.tooltip.right .tooltip-arrow {border-right-color: #292f33;border-width: 5px 5px 5px 0;left: 0;margin-top: -5px;top: 50%;}
+.tooltip.left .tooltip-arrow {border-left-color: #292f33;border-width: 5px 0 5px 5px;margin-top: -5px;right: 0;top: 50%;}
+.tooltip.bottom .tooltip-arrow {border-bottom-color: #292f33;border-width: 0 5px 5px;left: 50%;margin-left: -5px;top: 0;}
 .popover {background-color: white;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 6px;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);display: none;left: 0;max-width: 10em;padding: 1px;position: absolute;text-align: left;top: 0;white-space: normal;width: 100%;z-index: 2000;}
 .popover.top {margin-top: -10px;}
 .popover.right {margin-left: 10px;}
@@ -219,19 +243,19 @@ ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear:
 
 @media (min-width: 40em) {.popover { max-width: 28em; }}
 
-.popover-title {background-color: #3a4141;border-bottom: 1px solid #3a4141;border-radius: 5px 5px 0 0;color: white;font-size: 17px;line-height: 18px;margin: 0;padding: 8px 14px;}
+.popover-title {background-color: #292f33;border-bottom: 1px solid #292f33;border-radius: 5px 5px 0 0;color: white;font-size: 17px;line-height: 18px;margin: 0;padding: 8px 14px;}
 .popover-title:empty {display: none;}
 .popover-content {padding: 8px 14px;}
 .popover .arrow, .popover .arrow::after {border-color: transparent;border-style: solid;display: block;height: 0;position: absolute;width: 0;}
 .popover .arrow {border-width: 11px;}
 .popover .arrow::after {border-width: 10px;content: "";}
-.popover.top .arrow {border-bottom-width: 0;border-top-color: #3a4141;bottom: -11px;left: 50%;margin-left: -11px;}
+.popover.top .arrow {border-bottom-width: 0;border-top-color: #292f33;bottom: -11px;left: 50%;margin-left: -11px;}
 .popover.top .arrow::after {border-bottom-width: 0;border-top-color: white;bottom: 1px;margin-left: -10px;}
-.popover.right .arrow {border-left-width: 0;border-right-color: #3a4141;left: -11px;margin-top: -11px;top: 50%;}
+.popover.right .arrow {border-left-width: 0;border-right-color: #292f33;left: -11px;margin-top: -11px;top: 50%;}
 .popover.right .arrow::after {border-left-width: 0;border-right-color: white;bottom: -10px;left: 1px;}
-.popover.bottom .arrow {border-bottom-color: #3a4141;border-top-width: 0;left: 50%;margin-left: -11px;top: -11px;}
+.popover.bottom .arrow {border-bottom-color: #292f33;border-top-width: 0;left: 50%;margin-left: -11px;top: -11px;}
 .popover.bottom .arrow::after {border-bottom-color: white;border-top-width: 0;margin-left: -10px;top: 1px;}
-.popover.left .arrow {border-left-color: #3a4141;border-right-width: 0;margin-top: -11px;right: -11px;top: 50%;}
+.popover.left .arrow {border-left-color: #292f33;border-right-width: 0;margin-top: -11px;right: -11px;top: 50%;}
 .popover.left .arrow::after {border-left-color: white;border-right-width: 0;bottom: -10px;right: 1px;}
 .fade {opacity: 0;transition: opacity 0.15s ease-in-out 0s;}
 .fade.in {opacity: 1;}
@@ -255,7 +279,7 @@ ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear:
 </div>
 
 <div id="logotagalt" style="display:none;">
-<a data-original-title="we make our developers really happy too" data-toggle="tooltip" rel="me" title="me" href="https:/twitter.com/glynthom" target="_blank">
+<a data-original-title="glyn thomas | student startup" data-toggle="tooltip" rel="me" title="me" href="https:/twitter.com/glynthom" target="_blank">
  
  <div id="avatar" class="logo" style="display:block;"></div>
  <div id="avatarhover" class="logo" style="display:none;"></div>
@@ -270,19 +294,14 @@ ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear:
     
 <article class="post text lato">
                  
-<p><b>unbios</b> is a technology company with a mission to make excellent software which is simple and enjoyable to use.</p>                      
+<h2><span class="unbios">unbios</span><span class="isa"> is a</span> <span class="tech">techn&shy;ology</span> <span class="company">company</span> <span class="with">with</span> <span class="a">a</span> <span class="mission">mission</span> <span class="to">to</span> <span class="make">make</span> <span class="excellent">excellent</span> <span class="software">software</span> <span class="which">which</span> <span class="iss">is</span> <span class="simple">simple</span> <span class="and">and</span> <span class="fun">fun<span> <span class="tou">to</span> <span class="use">use.</span></h2>                      
 
 </article>   
                 
-<!-- <article class="post text lato"> -->
-<!-- <h3><a class="post-title lato" href="" target="_blank"></a></h3> -->
-<!-- <p>Watch this space.</p> -->                                                        
-<!-- </article> -->
+<!-- <article class="post text lato"> <h3><a class="post-title lato" href="" target="_blank"></a></h3> <p>Watch this space.</p> </article> -->
 
 <article class="post text lato">
-                   
-<p>you can find us on <a href="https://www.facebook.com/unbios">facebook</a>, <a href="https://twitter.com/unbiosed" target="_blank">twitter</a> and <a href="https://instagram.com/unbiosed" target="_blank">instagram</a> or if you want to say hello.</p>              
-                              
+<p>you can find us on <a href="https://www.facebook.com/unbios" class="fb" target="_blank">facebook</a>, <a href="https://twitter.com/unbiosed" target="_blank">twitter</a> and <a href="https://instagram.com/unbiosed" class="ig" target="_blank">instagram</a> or if you want to say hello.</p>                              
 </article>
                    
 </section>
