@@ -64,80 +64,114 @@
 * { margin: 0; padding: 0;}
 
 html {background: #ededed url("/img/unbios-background.png") no-repeat scroll center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
-body {color: #333;font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 16px;font-style: normal;font-variant: normal;font-weight: 400;line-height: 1.5;text-rendering: optimizelegibility;}
+
+body {color: #333;font-family: "Helvetica Neue",Arial,sans-serif;font-size: 16px;line-height: 1.4;margin: 0 auto;text-rendering: optimizelegibility;}
+
+/* body {color: #333;font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 16px;font-style: normal;font-variant: normal;font-weight: 400;line-height: 1.5;text-rendering: optimizelegibility;} */
 
 #avatar {background-image: url('/img/unbios_blue_logo_on_circle_400x400.png');background-size: 73px 73px;height: 74px;margin-left: auto;margin-right: auto;width: 73px;display:block;}
 #avatarhover {background-image: url('/img/avatar_bw_128.png');background-size: 73px 73px;height: 73px;margin-left: auto;margin-right: auto;width: 73px;display:none;}
 
-/* h1, h2, .h1, .h2 {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-weight: 400;line-height: 1.25;margin-top: .5em;} */
-h1, h2, .h1, .h2 {font-weight: 900;line-height: 1.25;margin-top: 0.5em;letter-spacing: 0.3px;word-wrap: break-word;}
-h1, .h1 {font-weight:bold;font-size: 32px;}
-h2, .h2 {font-size: 24px;}
-h3, .h3 {font-size: 20px;}
-ul {list-style-type: none;}
-h1+h2 { margin-top: 0; }
-p, .p, ul, ol {font-size: 18px;}
-.lato {font-family: "Lato","Helvetica Neue",Arial,sans-serif;}
-p.middle { text-align: center; }
-small, .small {font-family: "Helvetica Neue",Arial,sans-serif;color: #757575;font-size: 14px;}
-.small a {color:black;}
-.small a:hover{color: black;text-decoration: underline;}
-strong, .strong {font-weight: 700;}
-.center-text { text-align: center;}
-p, ul, ol { margin-top: 1em; }
+.lato {font-family:"Lato","Helvetica Neue",Arial,sans-serif;}
+ .date {color: #9e9ea6;font-family: "Helvetica Neue",Arial,sans-serif;font-size: 0.9rem;margin: 1rem 0 !important;text-align: center;}
+ .date a {color: #9e9ea6;text-decoration: underline;}
+ 
+ header { padding-top: 3.3rem; margin: 0 auto; overflow: hidden; }
+ header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
+ header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
+ #logotag { margin-left: auto; margin-right: auto; width: 73px;}
+ h1, h2, .h1, .h2 {font-weight: 900;line-height:1.2;margin-top:.5em;text-align:center;}
+ h1, .h1 { font-size: 2.75rem;font-weight: 900;}
+ h2, .h2 { font-size: 2.75rem; } 
+ h3, .h3 { font-size: 24px; }
+
+ header p { padding-left: 91px;}
+ #logotag {display:block;}
+ #logotagalt {display:none;}
+ article.text h2 {font-size: 2.75rem;}
+ article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 20px;font-weight: 400;}
+ 
+ ul {list-style-type: none;}
+ h1+h2 { margin-top: 0; }
+ p.middle { text-align: center; }
+     
+ small, .small {margin-top: 23px;font-size: 14px;color: #757575;}
+ .small a {color:black;}
+ strong, .strong {font-weight: 700;}
+ p, ul, ol { margin-top: 1em; }
+ .tmblr-full { margin-top: 1em; }
 
 
-@media screen and (max-width: 479px) {
-      header { padding-top: 3.2rem; margin: 0 auto; overflow: hidden; }
-      header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }    
-
-      #logotag {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
-      #logotagalt {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
-      h1, .h1 { font-size: 40px; }
-      h1, .h1 { font-size: 40px; }
-      h2, .h2 { font-size: 32px; }
-      h3, .h3 { font-size: 24px; }
-      p, .p, ul, ol { font-size: 20px;}
-      small, .small { font-size: 15px;}
-      #logotag {display:block;}
-      #logotagalt {display:none;}
-}
+@media screen and (max-width: 640px) {
       
-@media screen and (min-width: 480px) {
-      header { padding-top: 3.2rem; margin: 0 auto; overflow: hidden; }
       header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
-
-      #logotag {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
-      #logotagalt {width: 50%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
-      h1, .h1 { font-size: 40px; }
-      h1, .h1 { font-size: 40px; }
-      h2, .h2 { font-size: 32px; }
+      #logotag { margin-left: auto; margin-right: auto;}
+      h1, .h1 { font-size: 2.75rem;font-weight: 900;}
+      h2, .h2 { font-size: 2.25rem; } 
       h3, .h3 { font-size: 24px; }
-      p, .p, ul, ol { font-size: 20px;}
-      small, .small { font-size: 15px; margin-left: 14px;}
-      #logotag {display:block;}
-      #logotagalt {display:none;}
-}
-            
-@media screen and (min-width: 640px) {
-      header { padding-top: 2.7rem; margin: 0 auto; overflow: hidden; }
-      header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
-
-      #logotag {width:10%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
-      #logotagalt {width: 10%; margin-left: auto; margin-right: auto; font-family: "Helvetica Neue",Arial,sans-serif;}
-      /* h1, .h1 { font-size: 45px; } */
-      h1, .h2 { font-size: 2.75rem;font-weight: 900; }
-      h2, .h2 { font-size: 40px; } 
-      h3, .h3 { font-size: 32px; }
-      .logo {margin-top: 10px;}
       header p { padding-left: 91px;}
       #logotag {display:block;}
       #logotagalt {display:none;}
+      article.text h2 {font-size: 2.25rem;}
+      article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 19px;font-weight: 400;}
+}
+
+ @media screen and (max-width: 620px) {
+
+      header h1 {width: 280px;}
+      .header_links {right: 1rem;top: 1.5rem;}
+      article.text h2 {font-size: 1.75rem;}
+      article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 18px;font-weight: 400;}
+
+ }
+
+ @media screen and (max-width: 510px) {
+
+      .header_links a.btn {display: none;}
+      article.text h2 {font-size: 1.75rem;}
+      article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 18px;font-weight: 400;}
+
+ }
+
+ @media screen and (max-width: 500px) {
+
+      iframe[src^="//instagram"] {min-height: 550px;}
+      article.text h2 {font-size: 1.75rem;}
+      article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 18px;font-weight: 400;}
+ 
+ }
+
+@media screen and (max-width: 480px) {
+      
+      header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }   
+      #logotag { margin-left: auto; margin-right: auto; width: 73px;}
+      h1, .h1 { font-size: 2.75rem; }
+      h2, .h2 { font-size: 1.75rem; }
+      h3, .h3 { font-size: 24px; }
+      small, .small { font-size: 16px;}
+      .header-image-wrapper {height: 200px;}
+      .answer_form_container iframe {min-height: 143px;}
+      article.text h2 {font-size: 1.75rem;}
+      article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 18px;font-weight: 400;}
+}
+
+@media screen and (max-width: 479px) {
+      
+      header:after { clear: both; content: '.'; display: block; height: 0; visibility: hidden; }
+      #logotag { margin-left: auto; margin-right: auto; width: 73px;}
+      h1, .h1 { font-size: 2.75rem; }
+      h2, .h2 { font-size: 1.75rem; }
+      h3, .h3 { font-size: 24px; }
+      small, .small { font-size: 15px;}
+      article.text h2 {font-size: 1.75rem;}
+      article.text .body-text {font-family: "Lato","Helvetica Neue",Arial,sans-serif;font-size: 18px;font-weight: 400;}
+
 }
       
-.wrap {width: 90%;padding: 0 5%;max-width: 48em;margin-left: auto;margin-right: auto;margin-top: 12px;overflow: hidden;}
+.wrap {width: 90%;padding: 0 5%;max-width: 48em;margin-left: auto;margin-right: auto;margin-top: 15px;overflow: hidden;}
       
 article {text-rendering: optimizelegibility;font-size: 1.25em;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {display: block;}
 a {color: #137CCC;text-decoration: none;outline: 0;}
 a:hover {color: #137CCC;text-decoration: underline;}                      
 header h1 a{color: #444444;letter-spacing: -1.5px;}
@@ -166,7 +200,10 @@ header a:hover {text-decoration: none;color: #000000;}
 .pagination .previous {float: left;}
 .pagination .next {float: right;}
 
-footer.wrap {padding-top: 2em;padding-bottom: 2em;}
+.social_likes {}
+.disclaim {color: #555555;font-weight: bold;text-shadow: 1px 1px rgba(255, 255, 255, 0.5);}
+footer.wrap {padding-bottom: 2em;padding-top: 1em;text-align: center;}
+
 ul.pages {list-style: none;}
 ul.pages li {display: inline-block;margin-right: 1em;}
 ul.pages li a {display: block;height: 3em;line-height: 3em;}
@@ -197,9 +234,6 @@ ul.social_links li a.twitter:hover, a.twitter:visited:hover {list-style-type: no
 ul#twitter_update_list {background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);border-radius: 4px 4px 4px 4px;box-shadow: 0 0 0 2px rgba(16, 48, 68, 0.2) inset;margin: 0 0 0 0px;padding: 10px;position: relative;}
 ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear: both;padding: 24px 0 10px;margin-left:20px;margin-right:20px;background: #FFFFFF;}
       
-.social_likes {}
-.disclaim {color: #999999;text-shadow: 1px 1px rgba(255, 255, 255, 0.5);}
-
 .tooltip {display: block;font-size: 12px;line-height: 1.4;opacity: 0;position: absolute;transition: opacity 0.15s ease-in-out 0s;visibility: visible;z-index: 500;}
 .tooltip.in {opacity: 0.95;transition: opacity 0.1s ease 0s;}
 .tooltip.top {margin-top: -3px;padding: 5px 0;}
@@ -249,8 +283,8 @@ ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear:
 <div id="logotag" display="block;">
 <a data-original-title="... the coffee and pizza guy" data-toggle="tooltip" rel="me" title="" href="https://twitter.com/glynthom" target="_blank">
  
- <div id="avatar" class="logo" style="display:block; width:73px; height:73px;"></div>
- <div id="avatarhover" class="logo" style="display:none;"></div>
+<div id="avatar" class="logo" style="display:block; width:73px; height:73px;"></div>
+<div id="avatarhover" class="logo" style="display:none;"></div>
  
 </a>
 </div>
@@ -272,33 +306,28 @@ ul#twitter_update_list li {border-bottom: 2px solid rgba(0, 49, 79, 0.08);clear:
 <article class="post text lato">
 
 <h2 class="lato" style="text-align:center">unbios</h2>
+
+<div class="body-text">
                  
-<p><b>Unbios</b> is a techn&shy;ology company with a mission to make excellent software which is simple and fun to use.</p>                      
+<p><b>Unbios</b> is a techn&shy;ology company with a mission to make excellent software which is simple and fun to use,</p>                      
 
-</article>   
-                
-<!-- <article class="post text lato"> <h3><a class="post-title lato" href="" target="_blank"></a></h3> <p>Watch this space.</p> </article> -->
-
-<article class="post text lato">
 <p>you can find us on <a href="https://www.facebook.com/unbios" class="fb" target="_blank">facebook</a>, <a href="https://instagram.com/unbiosed" class="ig" target="_blank">instagram</a> or <a href="https://twitter.com/unbiosed" target="_blank">twitter</a> if you want to say hello.</p>                              
 </article>
+
+</div>
                    
 </section>
 
 </div>
-  
-<footer id="footer" class="small">
-            
-<ul class="social_links">
-      
-</ul>
-                    
-<div class="small">
-  <div class="disclaim center-text">copyright © 2014-2015 unbios.</div>
-  <div class="disclaim center-text">all rights reserved.</div>
-</div>
-            
+
+<footer class="small wrap">
+<a href="http://unbios.com">All rights reserved</a>
+<ul class="social_links"> </ul>
+<p class="small">
+<div class="center-text">copyright © 2014-2015 unbios.</div>
+</p>
 </footer>
+  
       
 <!-- animate script start -->
       
