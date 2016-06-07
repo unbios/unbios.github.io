@@ -324,7 +324,7 @@ function clickchat(begin) {
          setTimeout( function() { set_html_id('saythings','Digital Branding'); } , 1200 );
          setTimeout( function() { set_html_id('saythings','App Security'); } , 1400 );
          setTimeout( function() { set_html_id('saythings','Mobile Apps'); } , 1600 );
-         setTimeout( function() { set_html_id('saythings','Tech'); } , 1800 );
+         setTimeout( function() { set_html_id('saythings','Angel'); } , 1800 );
          setTimeout( function() { set_html_id('saythings','Investment'); } , 2000 );
          setTimeout( function() { set_html_id('saythings','Advisors'); } , 2200 );
          setTimeout( function() { set_html_id('saythings','Contact us'); } , 2400 );
