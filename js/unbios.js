@@ -304,10 +304,10 @@ function clickchat(begin) {
 
          setTimeout( function() { set_html_id('saythings','Easier'); } , 8600 );
  
-         setTimeout( function() { document.getElementById('chicken').style.display = 'block'; document.getElementById('saythings').style.display = 'none'; set_html_id('saythings','');} , 8800 );
+         setTimeout( function() { document.getElementById('chicken').style.display = 'block'; document.getElementById('saythings').style.display = 'none'; set_html_id('saythings','');} , 9200 );
          
          fwdstate = 1;
-         setTimeout( function() { chickencook(); } , 9000 );
+         setTimeout( function() { chickencook(); } , 9400 );
   
          }
     break;
