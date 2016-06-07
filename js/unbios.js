@@ -299,10 +299,10 @@ function clickchat(begin) {
          setTimeout( function() { document.getElementById('approve').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 7400 );
          setTimeout( function() { set_html_id('saythings','Business!'); } , 7600 );
 
-         setTimeout( function() { set_html_id('saythings','Trying to make'); } , 7800 );
-         setTimeout( function() { set_html_id('saythings','the impossible'); } , 8200 );
+         setTimeout( function() { set_html_id('saythings','Making the difficult'); } , 7800 );
+         setTimeout( function() { set_html_id('saythings','that little bit'); } , 8200 );
 
-         setTimeout( function() { set_html_id('saythings','Possible'); } , 8600 );
+         setTimeout( function() { set_html_id('saythings','Easier'); } , 8600 );
  
          setTimeout( function() { document.getElementById('chicken').style.display = 'block'; document.getElementById('saythings').style.display = 'none'; set_html_id('saythings','');} , 8800 );
          
