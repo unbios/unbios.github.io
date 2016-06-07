@@ -262,10 +262,10 @@ function clickchat(begin) {
          setTimeout( function() { document.getElementById('egg').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 1700 );
          setTimeout( function() { set_html_id('saythings','small'); } , 1900 );
          
-         setTimeout( function() { set_html_id('saythings','Creative'); } , 2100 );
+         setTimeout( function() { set_html_id('saythings','Technical'); } , 2100 );
          setTimeout( function() { document.getElementById('coffee').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 2300 );
          setTimeout( function() { document.getElementById('coffee').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 2500 );
-         setTimeout( function() { set_html_id('saythings','Creative'); } , 2700 );
+         setTimeout( function() { set_html_id('saythings','Technical'); } , 2700 );
 
          setTimeout( function() { set_html_id('saythings','Consultancy'); } , 2900 );
          setTimeout( function() { set_html_id('saythings','we'); } , 3100 );
@@ -299,8 +299,8 @@ function clickchat(begin) {
          setTimeout( function() { document.getElementById('approve').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 7400 );
          setTimeout( function() { set_html_id('saythings','Business!'); } , 7600 );
 
-         setTimeout( function() { set_html_id('saythings','Making The'); } , 7800 );
-         setTimeout( function() { set_html_id('saythings','Impossible'); } , 8200 );
+         setTimeout( function() { set_html_id('saythings','Trying to make'); } , 7800 );
+         setTimeout( function() { set_html_id('saythings','the impossible'); } , 8200 );
 
          setTimeout( function() { set_html_id('saythings','Possible'); } , 8600 );
  
