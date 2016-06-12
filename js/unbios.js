@@ -251,6 +251,7 @@ function clickchat(begin) {
   switch (begin) {
     case ('intro'):
          if (fwdstate === 0) {
+         scrollTo(0, 700); 
          setTimeout( function() { document.getElementById('normal').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 50 );
          setTimeout( function() { set_html_id('saythings','hello'); } , 500 );
          setTimeout( function() { set_html_id('saythings','we'); } , 700 );
