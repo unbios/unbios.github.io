@@ -61,13 +61,13 @@ document.onreadystatechange = function () {
 
 function checkurlvalue() {
   if ( (window.location.search.substring(1).toString().split('=')[1]) !== 'terms' ) {
-      console.log ('no url param detected !');
+      // console.log ('no url param detected !');
       document.getElementById('mrglynthomas').style.display = 'block'; 
       document.getElementById('mrlegal').style.display = 'none';
       cstate = 'start';
 
   } else {
-      console.log ('url param detected !');
+      // console.log ('url param detected !');
       document.getElementById('mrglynthomas').style.display = 'none'; 
       document.getElementById('mrlegal').style.display = 'block';
       cstate = 'legal';
@@ -152,8 +152,8 @@ document.onclick = function keyClick(event) {
   var tagclass = elem.className.toString().split(" ")[0];
   var tagtype = elem.tagName.toLowerCase();
 
-  console.log(tagid);
-  console.log(tagclass);
+  // console.log(tagid);
+  // console.log(tagclass);
   /*console.log(tagtype);*/
 
   switch (true) {
@@ -173,7 +173,7 @@ document.onclick = function keyClick(event) {
    break;
    case (tagid === 'egg'):
          clearTimeout(chick);clearTimeout(cluck);
-         if (fwdstate !== 3) { boilegg(); } else { console.log('egg timer already called!'); clearInterval(newegg); clickchat('egg');}
+         if (fwdstate !== 3) { boilegg(); } else { /*console.log('egg timer already called!');*/ clearInterval(newegg); clickchat('egg');}
    break;
 
    case (tagclass === 'profilelegal'):
@@ -428,11 +428,11 @@ function chicken() {
     break;
     case (document.getElementById('chicken').style.display === 'block'):
           cluck = setTimeout( function() { document.getElementById('chicken').style.display = 'none'; document.getElementById('egg').style.display = 'block'; } , 1000 );
-          console.log('chicken check!');
+          // console.log('chicken check!');
     break; 
     case (document.getElementById('egg').style.display === 'block'):
           cluck = setTimeout( function() { document.getElementById('egg').style.display = 'none'; document.getElementById('chicken').style.display = 'block'; } , 1000 );
-          console.log('egg check!');
+          // console.log('egg check!');
     break; 
 
   }
@@ -470,7 +470,7 @@ function starttimer(duration, display) {
 
   display.textContent = minutes + ":" + seconds;
 
-  if (--timer < 0) { timer = duration;clearInterval(newegg); console.log('timer completed :)');clickchat('egg'); }
+  if (--timer < 0) { timer = duration;clearInterval(newegg); /*console.log('timer completed :)');*/ clickchat('egg'); }
 
  }, 1000);
 
@@ -552,7 +552,7 @@ function contactmsg() {
   var data = [[0, 11, "Good morning"], [12, 17, "Good afternoon"],[18, 24, "Good night"]],hr = new Date().getHours();
   for(var i = 0; i < data.length; i++){
     if(hr >= data[i][0] && hr <= data[i][1]){
-       console.log(data[i][2]);
+       // console.log(data[i][2]);
     }
   }
   data = null;
