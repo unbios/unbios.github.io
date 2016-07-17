@@ -62,18 +62,20 @@ document.onreadystatechange = function () {
 function checkurlvalue() {
   if ( (window.location.search.substring(1).toString().split('=')[1]) !== 'terms' ) {
       // console.log ('no url param detected !');
-      document.getElementById('mrglynthomas').style.display = 'block'; 
-      document.getElementById('mrlegal').style.display = 'none';
+      document.getElementById('begin').style.display = 'block'; 
+      document.getElementById('details').style.display = 'none';
+      document.getElementById('legal').style.display = 'none';
       cstate = 'start';
 
   } else {
       // console.log ('url param detected !');
-      document.getElementById('mrglynthomas').style.display = 'none'; 
-      document.getElementById('mrlegal').style.display = 'block';
+      document.getElementById('begin').style.display = 'none'; 
+      document.getElementById('details').style.display = 'none';
+      document.getElementById('legal').style.display = 'block';
       cstate = 'legal';
   }
 
-  timtoggle('toggle'); timtoggle('resume'); 
+      timtoggle('toggle'); timtoggle('resume'); 
 
 }
 
@@ -560,6 +562,8 @@ function contactmsg() {
 
 function timtoggle(ctrl) {
 
+ if (cstate !== 'legal') {
+
   switch(ctrl) {
 
     case ('stop'):
@@ -613,6 +617,7 @@ function timtoggle(ctrl) {
     break;
 
   }
+ }
 }
 
 function gifcntrl(state) {
