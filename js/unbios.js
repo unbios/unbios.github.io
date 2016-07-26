@@ -40,6 +40,8 @@ window.cstate = 'start';
 window.repedo = 0;
 
 window.chat = 0;
+window.once = 0;
+
 window.chick = 0;
 window.cluck = 0;
 
@@ -107,6 +109,28 @@ s = repeat every 's' miliseconds
 
 function scrollTo(e,d){if(d>=0){var h=document.documentElement;if(h.scrollTop===0){var t=h.scrollTop;++h.scrollTop;h=t+1===h.scrollTop--?h:document.body}typeof e==="object"&&(e=e.offsetTop);scrollToX(h,h.scrollTop,e,0,1/d,20)}}function scrollToX(e,a,b,t,v,s){function F(){var k='';t<0||t>1||v<=0||(k=t-1,e.scrollTop=a-(a-b)*(k*k*k+1),t+=v*s,setTimeout(F,s))} F() }
 
+window.onfocus = function() {
+
+/* reset elsewhere */
+ setTimeout(function() {
+  clear_css_class('unbios','underblu');
+  clear_css_class('supportsaint','under');
+  clear_css_class('busyrocket','under');
+  clear_css_class('crowdcc','under');
+  clear_css_class('gmail','under');
+  clear_css_class('terms','under');
+
+  set_css_class('unbios', 'display', 'none');
+  set_css_class('darktwitter', 'display', 'block');
+  set_css_class('bluetwitter', 'display', 'none');
+  set_css_class('darkinstagram', 'display', 'block');
+  set_css_class('blueinstagram', 'display', 'none');
+  set_css_class('darklinkedin', 'display', 'block');
+  set_css_class('bluelinkedin', 'display', 'none');
+
+ }, 1000);
+
+}
 
 document.onmouseover = function mouseover(event) {
 
@@ -117,15 +141,49 @@ document.onmouseover = function mouseover(event) {
 
  var tagclass = elem.className.toString().split(" ")[0];
 
+ var totalCount = 3;
+ var num = Math.ceil( Math.random() * totalCount );
+
  //console.log('mouseover here : '+ tagclass);
 
  switch(true) {
 
-  case (tagclass === 'profile'):
+  case (tagid === 'unbios'):
+        clear_css_class('unbios','underbluline');
+        once = 0;
+  break;
+  case (tagid === 'supportsaint'):
+        if (isodd(num)) {clear_css_class('supportsaint','underbluline');} else {clear_css_class('supportsaint','underredline')};
+  break;
+  case (tagid === 'busyrocket'):
+        if (isodd(num)) {clear_css_class('busyrocket','underbluline');} else {clear_css_class('busyrocket','underredline')};
+  break;
+  case (tagid === 'crowdcc'):
+        if (isodd(num)) {clear_css_class('crowdcc','underbluline');} else {clear_css_class('crowdcc','underredline')};
+  break;
+  case (tagid === 'gmail'):
+        if (isodd(num)) {clear_css_class('gmail','underbluline');} else {clear_css_class('gmail','underredline')};
+  break;
+  case (tagid === 'terms'):
+        if (isodd(num)) {clear_css_class('terms','underbluline');} else {clear_css_class('terms','underredline')};
+  break;
+
+  case (tagclass === "darkprofile"):
+        once = 1;
+        set_css_class('darkprofile', 'display', 'none');
+        set_css_class('blueprofile', 'display', 'block');
+        setTimeout(function() {
+        set_css_class('darkprofile', 'display', 'block');
+        set_css_class('blueprofile', 'display', 'none');
+        once = 0;
+        }, 200);
 
   break;
 
  }
+
+ elem = null;tagclass = null;tagid = null;totalCount = null;num = null;
+
 }
 
 document.onmouseout = function mouseover(event) {
@@ -138,10 +196,35 @@ document.onmouseout = function mouseover(event) {
  var tagclass = elem.className.toString().split(" ")[0];
 
  switch(true) {
-  case (tagclass === 'profile'):    
+
+  case (tagid === 'unbios'):
+        clear_css_class('unbios','underblu');
+        profileflash();
+  break;
+  case (tagid === 'supportsaint'):
+        clear_css_class('supportsaint','under');
+  break;
+  case (tagid === 'busyrocket'):
+        clear_css_class('busyrocket','under');
+  break;
+  case (tagid === 'crowdcc'):
+        clear_css_class('crowdcc','under');
+  break;
+  case (tagid === 'gmail'):
+        clear_css_class('gmail','under');
+  break;
+  case (tagid === 'terms'):
+        clear_css_class('terms','under');
+  break;
+
+  case (tagclass === "darkprofile"):
+        socialflash();
   break;
 
  }
+
+ elem = null;tagclass = null;tagid = null;
+
 }
 
 document.onclick = function keyClick(event) {
@@ -245,6 +328,24 @@ document.onclick = function keyClick(event) {
          scrollTo(0, 700);
    break;
 
+   case (tagclass === 'twitter'):
+   case (tagclass === 'darktwitter'):
+         set_css_class('darktwitter', 'display', 'none');
+         set_css_class('bluetwitter', 'display', 'block');
+   break;
+
+   case (tagclass === 'instagram'):
+   case (tagclass === 'darkinstagram'):
+         set_css_class('darkinstagram', 'display', 'none');
+         set_css_class('blueinstagram', 'display', 'block');
+   break;
+
+   case (tagclass === 'linkedin'):
+   case (tagclass === 'darklinkedin'):
+         set_css_class('darklinkedin', 'display', 'none');
+         set_css_class('bluelinkedin', 'display', 'block');
+   break;
+
    case (tagid === '' && tagclass === ''):
          clearTimeout(chat);clearTimeout(chick);clearTimeout(cluck);
          timtoggle('stop');
@@ -275,47 +376,47 @@ function clickchat(begin) {
          chat = setTimeout( function() { document.getElementById('egg').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 1700 );
          chat = setTimeout( function() { set_html_id('saythings','small'); } , 1900 );
          
-         chat = setTimeout( function() { set_html_id('saythings','Technical'); } , 2100 );
+         chat = setTimeout( function() { set_html_id('saythings','tech'); } , 2100 );
          chat = setTimeout( function() { document.getElementById('coffee').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 2300 );
          chat = setTimeout( function() { document.getElementById('coffee').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 2500 );
-         chat = setTimeout( function() { set_html_id('saythings','Technical'); } , 2700 );
+         chat = setTimeout( function() { set_html_id('saythings','tech'); } , 2700 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Consultancy'); } , 2900 );
+         chat = setTimeout( function() { set_html_id('saythings','consultancy'); } , 2900 );
          chat = setTimeout( function() { set_html_id('saythings','we'); } , 3100 );
   
-         chat = setTimeout( function() { set_html_id('saythings','Love'); } , 3300 );
+         chat = setTimeout( function() { set_html_id('saythings','love'); } , 3300 );
          chat = setTimeout( function() { document.getElementById('love').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 3500 );
          chat = setTimeout( function() { document.getElementById('love').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 3700 );
-         chat = setTimeout( function() { set_html_id('saythings','Love'); } , 3900 );
+         chat = setTimeout( function() { set_html_id('saythings','love'); } , 3900 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Creating'); } , 4100 );
+         chat = setTimeout( function() { set_html_id('saythings','creating'); } , 4100 );
          chat = setTimeout( function() { document.getElementById('brainburn').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 4300 );
          chat = setTimeout( function() { document.getElementById('brainburn').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 4500 );
-         chat = setTimeout( function() { set_html_id('saythings','Creating'); } , 4700 );
+         chat = setTimeout( function() { set_html_id('saythings','creating'); } , 4700 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Solutions'); } , 4900 );
+         chat = setTimeout( function() { set_html_id('saythings','solutions'); } , 4900 );
          chat = setTimeout( function() { document.getElementById('brain').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 5200 );
          chat = setTimeout( function() { document.getElementById('brain').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 5400 );
-         chat = setTimeout( function() { set_html_id('saythings','Solutions'); } , 5600 );
+         chat = setTimeout( function() { set_html_id('saythings','solutions'); } , 5600 );
   
-         chat = setTimeout( function() { set_html_id('saythings','Adding'); } , 5800 );
+         chat = setTimeout( function() { set_html_id('saythings','+'); } , 5800 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Value'); } , 6000 );
+         chat = setTimeout( function() { set_html_id('saythings','value'); } , 6000 );
          chat = setTimeout( function() { document.getElementById('money').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 6200 );
          chat = setTimeout( function() { document.getElementById('money').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 6400 );
-         chat = setTimeout( function() { set_html_id('saythings','Value'); } , 6600 );
+         chat = setTimeout( function() { set_html_id('saythings','value'); } , 6600 );
         
-         chat = setTimeout( function() { set_html_id('saythings','To Your'); } ,6800 );
+         chat = setTimeout( function() { set_html_id('saythings','for your'); } ,6800 );
    
-         chat = setTimeout( function() { set_html_id('saythings','Business!'); } , 7000 );
+         chat = setTimeout( function() { set_html_id('saythings','business!'); } , 7000 );
          chat = setTimeout( function() { document.getElementById('approve').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 7200 );
          chat = setTimeout( function() { document.getElementById('approve').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 7400 );
-         chat = setTimeout( function() { set_html_id('saythings','Business!'); } , 7600 );
+         chat = setTimeout( function() { set_html_id('saythings','business!'); } , 7600 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Making the difficult'); } , 7800 );
+         chat = setTimeout( function() { set_html_id('saythings','making the difficult'); } , 7800 );
          chat = setTimeout( function() { set_html_id('saythings','that little bit'); } , 8200 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Easier'); } , 8600 );
+         chat = setTimeout( function() { set_html_id('saythings','easier'); } , 8600 );
  
          chat = setTimeout( function() { document.getElementById('chicken').style.display = 'block'; document.getElementById('saythings').style.display = 'none'; set_html_id('saythings','');} , 9200 );
          
@@ -332,29 +433,29 @@ function clickchat(begin) {
     case ('chicken'):
          chat = setTimeout( function() { document.getElementById('chicken').style.display = 'none';document.getElementById('saythings').style.display = 'block';} , 500 );
       
-         chat = setTimeout( function() { set_html_id('saythings','I.T. Strategy'); } , 700 );
-         chat = setTimeout( function() { set_html_id('saythings','I.T. Security'); } , 900 );
-         chat = setTimeout( function() { set_html_id('saythings','Web Apps'); } , 1100 );
-         chat = setTimeout( function() { set_html_id('saythings','Digital Branding'); } , 1200 );
-         chat = setTimeout( function() { set_html_id('saythings','App Security'); } , 1400 );
-         chat = setTimeout( function() { set_html_id('saythings','Mobile Apps'); } , 1600 );
-         chat = setTimeout( function() { set_html_id('saythings','Angel'); } , 1800 );
-         chat = setTimeout( function() { set_html_id('saythings','Investment'); } , 2000 );
-         chat = setTimeout( function() { set_html_id('saythings','Advisors'); } , 2200 );
-         chat = setTimeout( function() { set_html_id('saythings','Contact us'); } , 2400 );
-         chat = setTimeout( function() { set_html_id('saythings','On'); } , 2600 );
+         chat = setTimeout( function() { set_html_id('saythings','I.T. strategy'); } , 700 );
+         chat = setTimeout( function() { set_html_id('saythings','I.T. security'); } , 900 );
+         chat = setTimeout( function() { set_html_id('saythings','web apps'); } , 1100 );
+         chat = setTimeout( function() { set_html_id('saythings','digital branding'); } , 1200 );
+         chat = setTimeout( function() { set_html_id('saythings','app security'); } , 1400 );
+         chat = setTimeout( function() { set_html_id('saythings','mobile apps'); } , 1600 );
+         chat = setTimeout( function() { set_html_id('saythings','angel'); } , 1800 );
+         chat = setTimeout( function() { set_html_id('saythings','investment'); } , 2000 );
+         chat = setTimeout( function() { set_html_id('saythings','advisors'); } , 2200 );
+         chat = setTimeout( function() { set_html_id('saythings','contact us'); } , 2400 );
+         chat = setTimeout( function() { set_html_id('saythings','by'); } , 2600 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Email'); } , 2800 );
+         chat = setTimeout( function() { set_html_id('saythings','email'); } , 2800 );
          chat = setTimeout( function() { document.getElementById('email').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 3000 );
          chat = setTimeout( function() { document.getElementById('email').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 3200 );
-         chat = setTimeout( function() { set_html_id('saythings','Email'); } , 3400 );
+         chat = setTimeout( function() { set_html_id('saythings','email'); } , 3400 );
     
-         chat = setTimeout( function() { set_html_id('saythings','Or'); } , 3600 );
+         chat = setTimeout( function() { set_html_id('saythings','or'); } , 3600 );
 
-         chat = setTimeout( function() { set_html_id('saythings','Twitter'); } , 3800 );
+         chat = setTimeout( function() { set_html_id('saythings','twitter'); } , 3800 );
          chat = setTimeout( function() { document.getElementById('twitter').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 4000 );
          chat = setTimeout( function() { document.getElementById('twitter').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 4200 );
-         chat = setTimeout( function() { set_html_id('saythings','Twitter'); } , 4400 );
+         chat = setTimeout( function() { set_html_id('saythings','twitter'); } , 4400 );
 
          chat = setTimeout( function() { document.getElementById('details').style.display = 'block';} , 4600 );
          chat = setTimeout( function() { scrollTo(document.body.scrollHeight, 0); } , 4800 );
@@ -362,7 +463,9 @@ function clickchat(begin) {
          chat = setTimeout( function() { document.getElementById('begin').style.display = 'none'; } , 5200 );
          chat = setTimeout( function() { document.getElementById('logo-alt').style.display = 'none'; document.getElementById('logo-default').style.display = 'block'; } , 5400 );
          chat = setTimeout( function() { scrollTo(0, 400) } , 5600 );
-         chat = setTimeout( function() { timtoggle('stop');} , 5800 );
+         chat = setTimeout( function() { once = 0;profileflash();} , 5800 );
+         chat = setTimeout( function() { once = 0;socialflash();} , 6000 );
+         chat = setTimeout( function() { timtoggle('stop');} , 6200 );
     break;
     case ('start'):
          if (fwdstate === 0) {
@@ -478,6 +581,78 @@ function starttimer(duration, display) {
 }
 
 
+function profileflash() {
+
+  if (once === 0) {
+
+  set_css_class('darkprofile', 'display', 'none');
+  set_css_class('blueprofile', 'display', 'block');
+  setTimeout(function() {
+  set_css_class('darkprofile', 'display', 'block');
+  set_css_class('blueprofile', 'display', 'none');
+  }, 2500);
+
+  clear_css_class('unbios','underbluline');
+  setTimeout(function() {
+  clear_css_class('unbios','underblu');
+  }, 800);
+
+  clear_css_class('supportsaint','underbluline');
+  setTimeout(function() {
+  clear_css_class('supportsaint','under');
+  }, 1500);
+
+  clear_css_class('busyrocket','underbluline');
+  setTimeout(function() {
+  clear_css_class('busyrocket','under');
+  }, 2000);
+
+  clear_css_class('crowdcc','underbluline');
+  setTimeout(function() {
+  clear_css_class('crowdcc','under');
+  }, 2500);
+
+  once = 1;
+
+  }
+}
+
+function socialflash() {
+
+  if (once === 0) {
+
+  setTimeout(function() {
+  set_css_class('darktwitter', 'display', 'none');
+  set_css_class('bluetwitter', 'display', 'block');
+  }, 200);
+  setTimeout(function() {
+  set_css_class('darktwitter', 'display', 'block');
+  set_css_class('bluetwitter', 'display', 'none');
+  }, 600);
+
+  setTimeout(function() {
+  set_css_class('darkinstagram', 'display', 'none');
+  set_css_class('blueinstagram', 'display', 'block');
+  }, 800);
+  setTimeout(function() {
+  set_css_class('darkinstagram', 'display', 'block');
+  set_css_class('blueinstagram', 'display', 'none');
+  }, 1200);
+
+  setTimeout(function() {
+  set_css_class('darklinkedin', 'display', 'none');
+  set_css_class('bluelinkedin', 'display', 'block');
+  }, 1600);
+  setTimeout(function() {
+  set_css_class('darklinkedin', 'display', 'block');
+  set_css_class('bluelinkedin', 'display', 'none');
+  }, 2000);
+
+  once = 1;
+
+  }
+}
+
 function unscroll(state) {
 
   switch (state) {
@@ -489,7 +664,6 @@ function unscroll(state) {
     break;
   }
 }
-
 
 function isvalid(html) {
 

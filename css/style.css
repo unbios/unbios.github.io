@@ -1,20 +1,19 @@
-#saythings {margin-top: -50px;}
+/* style.css v1.00.00 | (c) 2016 unbios.com */
 
+/* #saythings {margin-top: -20px;} */
 
 #details, #legal {
 
     color: #777;
     background: #FFFFFF;
     font: 400 13.5px/1.4 "Gotham SSm A","Gotham SSm B","Helvetica Neue",sans-serif;
-    /* margin: 100px 12%; */
     padding: 100px 13.2%;
     max-width: 600px;
-    /* padding: 0 20px; */
 
 }
 
 #details h3, #legal h3 {
-    color: #999;
+    /*color: #999;*/
     font-size: 11.5px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -28,22 +27,80 @@
     font-weight: 400;
 }
 
-#details a, #legal a {
+/* #currentus {display:block;padding-top: 14px;} */
+#contentdetails {display:block;padding-top: 14px;}
+#projectus {display:block; margin-top: 14px;}
+#contactus {display:block; margin-top: 20px;}
+#social {display:block; margin-top: 14px;}
+
+a, a:visited, img, input {
+    display: inline-block;
+    outline: 0 none;
+    text-decoration: none;
+    transition: color 0.3s ease 0s, opacity 0.3s ease 0s, background 0.3s ease 0s;
+}
+
+.under {
     border-bottom: 1px solid transparent;
     color: #191919;
     padding-bottom: 1px !important;
     text-decoration: none;
     outline:none;
 }
-#details a:hover, #legal a:hover {
+
+.underblu {
+    border-bottom: 1px solid transparent;
+    color: #0941CC;
+    padding-bottom: 1px !important;
+    text-decoration: none;
+    outline:none;
+}
+
+.underbluline {
+    border-bottom: 1px solid #0941CC;
+    color: #0941CC;
+    padding-bottom: 1px !important;
+    text-decoration: none;
+    outline:none;
+}
+
+.underredline {
+    border-bottom: 1px solid #C80909;
+    color: #C80909;
+    padding-bottom: 1px !important;
+    text-decoration: none;
+    outline:none;
+}
+
+.underline {
     border-bottom: 1px solid #000;
     padding-bottom: 1px;
     border-color: #191919;
+    border-color: #305FD4;
     color: #191919;
 }
 
+.social--icons {
+   padding-top: 5px; 
+ }
+
+
+.chatimg {
+   height: 60px;
+   width: 60px;
+   padding-top: 20px;
+   padding-bottom: 0px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.bluetwitter {display: none;}
+.blueinstagram {display: none;}
+.bluelinkedin {display: none;}
+
+
 #details img {
-    /* border-radius: 3px; */
     max-width: 100%;
 }
 #details ul, ol {
@@ -65,64 +122,20 @@
     font-weight: 400;
 }
 
-.social--icons{padding-top: 5px;}
+#details .instagram {
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+#contentdetails .instagram {
+    padding-left: 10px;
+    padding-right: 15px;
+}
 
 .detailprofile {padding-bottom: 7px !important;border-bottom: 0px solid #FFF !important;}
-.detailtwitter {padding-bottom: 12px !important;border-bottom: 0px solid #FFF !important;}
-.detailinstagram {padding-bottom: 12px !important;border-bottom: 0px solid #FFF !important;}
-.detaillinkedin {padding-bottom: 12px !important;border-bottom: 0px solid #FFF !important;}
-
-#details a.logo:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-#details a.twitter:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-#details a.instagram:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-#details a.linkedin:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-
-#legal a.logo:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-#legal a.twitter:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-#legal a.instagram:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-#legal a.linkedin:hover {border-bottom: 1px solid #FFF !important;padding-bottom: 1px;}
-
-#details .logo img:last-child{display:none}
-#details .logo:hover img:first-child{display:none}
-#details .logo:hover img:last-child{display:inline-block; }
-
-#legal .logo img:last-child{display:none}
-#legal .logo:hover img:first-child{display:none}
-#legal .logo:hover img:last-child{display:inline-block; }
-
-#details .twitter img:last-child{display:none}
-#details .twitter:hover img:first-child{display:none}
-#details .twitter:hover img:last-child{display:inline-block; }
-
-#legal .twitter img:last-child{display:none}
-#legal .twitter:hover img:first-child{display:none}
-#legal .twitter:hover img:last-child{display:inline-block; }
-
-#details .instagram {padding-left: 10px; padding-right: 10px;}
-#details .linkedin {padding-left: 5px; padding-right: 5px;}
-
-#legal .instagram {padding-left: 10px; padding-right: 10px;}
-#legal .linkedin {padding-left: 5px; padding-right: 5px;}
-
-#details .instagram img:last-child{display:none}
-#details .instagram:hover img:first-child{display:none}
-#details .instagram:hover img:last-child{display:inline-block; }
-
-#legal .instagram img:last-child{display:none}
-#legal .instagram:hover img:first-child{display:none}
-#legal .instagram:hover img:last-child{display:inline-block; }
-
-#details .linkedin img:last-child{display:none}
-#details .linkedin:hover img:first-child{display:none}
-#details .linkedin:hover img:last-child{display:inline-block; }
-
-#legal .linkedin img:last-child{display:none}
-#legal .linkedin:hover img:first-child{display:none}
-#legal .linkedin:hover img:last-child{display:inline-block; }
-
 
 #details p, ul, ol, #footnotes {
-    padding-bottom: 1.08em;
+    padding-bottom: 1.15em;
 }
 
 @media (max-width: 680px) {
@@ -169,11 +182,6 @@ html, body {
 #begin {}
 .begin {background: #0847C3;}
 
-/*
-#wrapper .mrglynthomas img:last-child{display:none}
-#wrapper .mrglynthomas:hover img:first-child{display:none}
-#wrapper .mrglynthomas:hover img:last-child{display:inline-block; }
-*/
 
 * {
     margin: 0;
@@ -185,7 +193,8 @@ embed,
 object,
 video {
     max-width: 100%;
-    border: 0
+    border: 0;
+    display: block;
 }
 
 body {
@@ -256,46 +265,6 @@ body {
     color: #fff
 }
 
-a,
-a:visited,
-img,
-input,
-a:visited:hover {
-    -moz-transition: color .3s, opacity .3s, background .3s;
-    -webkit-transition: color .3s, opacity .3s, background .3s;
-    -o-transition: color .3s, opacity .3s, background .3s;
-    transition: color .3s, opacity .3s, background .3s;
-    color: #c80909;
-    display: inline-block;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    outline:none;
-}
-
-a:active {
-    color: #222
-}
-
-a:visited {
-    color: #c66
-}
-
-a:hover {
-    color: #666
-}
-
-#content a:hover {
-    text-decoration: underline
-}
-
-a.img img,
-.sponsor a:hover img {
-    -moz-opacity: .9;
-    -webkit-opacity: .9;
-    filter: alpha(opacity=90);
-    opacity: .9
-}
-
 a.img {
     text-decoration: none
 }
@@ -317,16 +286,6 @@ a.img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.chatimg {
-        height: 60px;
-        width: 60px;
-        padding-top: 20px;
-        padding-bottom: 0px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
 }
 
 .profilelegal {
@@ -375,6 +334,11 @@ a.img {
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden
 }
+
+a, u {
+    text-decoration: none;
+}
+
 
 h1 {
     font-size: 4em;
