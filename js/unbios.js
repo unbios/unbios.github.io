@@ -399,7 +399,7 @@ function clickchat(begin) {
          chat = setTimeout( function() { document.getElementById('brain').style.display = 'none'; document.getElementById('saythings').style.display = 'block';} , 5400 );
          chat = setTimeout( function() { set_html_id('saythings','<b>solutions</b>'); } , 5600 );
   
-         chat = setTimeout( function() { set_html_id('saythings','+'); } , 5800 );
+         chat = setTimeout( function() { set_html_id('saythings','<b>adding</b>'); } , 5800 );
 
          chat = setTimeout( function() { set_html_id('saythings','<b>value</b>'); } , 6000 );
          chat = setTimeout( function() { document.getElementById('money').style.display = 'block'; document.getElementById('saythings').style.display = 'none';} , 6200 );
